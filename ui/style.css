@@ -1,15 +1,15 @@
 body {
-    font-family: sans-serif;
-    background-color: lightgrey;
+    font-family: comic sans;
+    background-color: blue;
     margin-top: 75px;
 }
 
 .center {
-    text-align: justify;
+    text-align: center;
 }
 
 .text-big {
-    font-size: 100%;
+    font-size: 200%;
 }
 
 .bold {
