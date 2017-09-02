@@ -1,14 +1,14 @@
 body {
     font-family: sans-serif;
-    background: lightgrey;
+    background: maroon;
 }
 
 .center {
-    text-align: right;
+    text-align: center;
 }
 
 .text-big {
-    font-size: 400%;
+    font-size: 700%;
 }
 
 .bold {
@@ -24,7 +24,6 @@ body {
     padding-left: 100px;
     padding-top: 50px;
     max-width: 600px;
-    color: maroon;
     font-family: sans-serif;
 }
 
