@@ -4,16 +4,15 @@ body {
 }
 
 .center {
-    text-align: center;
+    text-align: right;
 }
 
 .text-big {
-    font-size: 300%;
+    font-size: 400%;
 }
 
 .bold {
     font-weight: bold;
-    color: maroon;
 }
 
 .img-medium {
@@ -25,7 +24,7 @@ body {
     padding-left: 100px;
     padding-top: 50px;
     max-width: 600px;
-    color: grey;
+    color: maroon;
     font-family: sans-serif;
 }
 
