@@ -19,11 +19,6 @@ body {
     height: 200px;
 }
 
- .container{
-   
-    padding-left: 40px;
-}
-
 .container{
                 max-width:800px;
                 color:blue;
