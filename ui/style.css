@@ -24,3 +24,13 @@ body {
     padding-left: 40px;
 }
 
+.container{
+                max-width:800px;
+                color:blue;
+                font-family:sans-serif;
+                margin: 0 auto;
+                padding-left: 30px;
+                padding-right: 40px;
+                padding-top: 50px;
+                
+    }
