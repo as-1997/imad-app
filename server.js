@@ -24,13 +24,13 @@ app.use(morgan('combined'));
             </p>`
 };
    // articleTwo:{
-    title:'Article-Two |Arunima Setua',
-    heading: 'Article-Two',
-    date: 'sept 5,2017',
-    content: `<p>
-                This is the content in the second extension to my webApp.Wish me luck.This is Arunima Setua.
-            </p>`
-}
+  //  title:'Article-Two |Arunima Setua',
+  //  heading: 'Article-Two',
+    //date: 'sept 5,2017',
+  //  content: `<p>
+   //             This is the content in the second extension to my webApp.Wish me luck.This is Arunima Setua.
+   //         </p>`
+//}
 //};
 
 function createTemplate (data) {
