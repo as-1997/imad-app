@@ -30,7 +30,7 @@ var articles={
     content: `<p>
                 This is the content in the second extension to my webApp.Wish me luck.This is Arunima Setua.
             </p>`
-},
+}
 };
 
 function createTemplate (data) {
