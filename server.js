@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-    articleOne:{
+//var articles = {
+   var articleOne={
     title:'Article-One | Arunima Setua',
     heading: 'Article One',
     date:' sept 2,2017',
@@ -22,8 +22,8 @@ var articles = {
                 This is the content in the first extension to my webApp.Wish me luck.This is Arunima Setua.
                 This is the content in the firThis is the content in the firThis is the content in the fir
             </p>`
-},
-    articleTwo:{
+};
+   // articleTwo:{
     title:'Article-Two |Arunima Setua',
     heading: 'Article-Two',
     date: 'sept 5,2017',
@@ -31,9 +31,9 @@ var articles = {
                 This is the content in the second extension to my webApp.Wish me luck.This is Arunima Setua.
             </p>`
 }
-};
+//};
 
-function createTemplate (articles) {
+function createTemplate (data) {
     var title= data.title;
     var heading= data.heading;
     var date= data.date;
@@ -66,13 +66,8 @@ function createTemplate (articles) {
     return htmlTemplate;
 }
 
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
-app.get('/article-one', function (req,res){
-res.send(createTemplate(articleOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
@@ -81,9 +76,12 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-app.get('/article-two', function (req,res){
-    res.send(createTemplate(articleTwo));
- });
+app.get('/article-one', function (req,res){
+res.send(createTemplate(articleOne));
+});
+//app.get('/article-two', function (req,res){
+//    res.send(createTemplate(articleTwo));
+// });
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
