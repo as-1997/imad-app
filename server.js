@@ -23,15 +23,15 @@ app.use(morgan('combined'));
                 This is the content in the firThis is the content in the firThis is the content in the fir
             </p>`
 };
-   // articleTwo:{
-  //  title:'Article-Two |Arunima Setua',
-  //  heading: 'Article-Two',
-    //date: 'sept 5,2017',
-  //  content: `<p>
-   //             This is the content in the second extension to my webApp.Wish me luck.This is Arunima Setua.
-   //         </p>`
-//}
-//};
+   var articleTwo={
+  title:'Article-Two |Arunima Setua',
+    heading: 'Article-Two',
+    date: 'sept 5,2017',
+    content: `<p>
+                This is the content in the second extension to my webApp.Wish me luck.This is Arunima Setua.
+            </p>`
+
+};
 
 function createTemplate (data) {
     var title= data.title;
@@ -79,9 +79,9 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/article-one', function (req,res){
 res.send(createTemplate(articleOne));
 });
-//app.get('/article-two', function (req,res){
-//    res.send(createTemplate(articleTwo));
-// });
+app.get('/article-two', function (req,res){
+    res.send(createTemplate(articleTwo));
+    });
 
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
