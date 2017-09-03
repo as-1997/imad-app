@@ -5,12 +5,65 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+    title:'Article-One | Arunima Setua',
+    heading: 'Article One',
+    date:' sept 2,2017',
+    content: `<p>
+                This is the content in the first extension to my webApp.Wish me luck.This is Arunima Setua.
+                This is the content in the firThis is the content in the firThis is the content in the fir
+            </p>
+             <p>
+                This is the content in the first extension to my webApp.Wish me luck.This is Arunima Setua.
+                This is the content in the firThis is the content in the firThis is the content in the fir
+            </p>
+             <p>
+                This is the content in the first extension to my webApp.Wish me luck.This is Arunima Setua.
+                This is the content in the firThis is the content in the firThis is the content in the fir
+            </p>`
+};
+
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.date;
+    var content=data.content;
+    
+    
+        var htmlTemplate= `
+        <html>
+            <head>
+                <title>
+                    S{title}
+                </title>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+                </head>
+            <body>
+                <div>
+                    <a href="/">Home</a>
+                </div>
+                <hr/>
+                <h3> S{heading} </h3>
+                <div>
+                    S{date}
+                </div>
+                <div>
+                    S{content}
+                </div>
+                
+            </body>
+        </html>
+        `;
+    return htmlTemplate;
+}
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function (req,res){
-res.sendFile(path.join(__dirname, 'ui', 'articleOne.html'));
+res.send(createTemplate(articleOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
