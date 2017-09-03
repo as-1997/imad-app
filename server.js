@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
+var articles={
+    'articleOne':{
     title:'Article-One | Arunima Setua',
     heading: 'Article One',
     date:' sept 2,2017',
@@ -21,6 +22,15 @@ var articleOne={
                 This is the content in the first extension to my webApp.Wish me luck.This is Arunima Setua.
                 This is the content in the firThis is the content in the firThis is the content in the fir
             </p>`
+},
+    'articleTwo':{
+    title:'Article-Two |Arunima Setua',
+    heading: 'Article-Two',
+    date: 'sept 5,2017',
+    content: `<p>
+                This is the content in the second extension to my webApp.Wish me luck.This is Arunima Setua.
+            </p>`
+},
 };
 
 function createTemplate (data) {
@@ -74,7 +84,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 app.get('/article-two', function (req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'articleTwo.html'));
+    res.send(createTemplate(articleTwo));
  });
 
 // Do not change port, otherwise your app won't run on IMAD servers
